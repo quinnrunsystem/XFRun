@@ -8,7 +8,7 @@
     <ProjectGuid>{D2EB8B04-0322-4C7E-B346-F0BAE977E64A}</ProjectGuid>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
-    <RootNamespace>XFRun.UI</RootNamespace>
+    <RootNamespace>XFRun.UI.iOS</RootNamespace>
     <AssemblyName>XFRun.UI</AssemblyName>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
   </PropertyGroup>
@@ -59,20 +59,22 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Renderers\BorderlessEntryRenderer.cs" />
+    <Compile Include="RendererInitializer.cs" />
+    <Compile Include="Renderers\ExtendedFrameRenderer.cs" />
+    <Compile Include="Renderers\RoundedCornerViewRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\XFRun.UI\XFRun.UI.csproj">
-      <Project>{5C9E8E03-A6D8-4C7F-B880-A07D96967E29}</Project>
-      <Name>XFRun.UI</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="Renderers\" />
   </ItemGroup>
-  <Import Project="..\XFRun.UI.Shared\XFRun.UI.Shared.projitems" Label="Shared" Condition="Exists('..\XFRun.UI.Shared\XFRun.UI.Shared.projitems')" />
+  <ItemGroup>
+    <ProjectReference Include="..\XFRun.UI\XFRun.UI.Forms.csproj">
+      <Project>{5C9E8E03-A6D8-4C7F-B880-A07D96967E29}</Project>
+      <Name>XFRun.UI.Forms</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\NuGet.Build.Packaging.0.2.2\build\NuGet.Build.Packaging.targets" Condition="Exists('..\packages\NuGet.Build.Packaging.0.2.2\build\NuGet.Build.Packaging.targets')" />
   <Import Project="..\packages\Xamarin.Forms.3.2.0.871581\build\netstandard2.0\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.3.2.0.871581\build\netstandard2.0\Xamarin.Forms.targets')" />

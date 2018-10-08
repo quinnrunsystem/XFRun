@@ -1,36 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:views="clr-namespace:XFRun.UI.Renderers"
+<views:RoundedCornerView xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:views="clr-namespace:XFRun.UI.Forms.Renderers"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="XFRun.UI.TextBox">
-    <ContentView.Content>
-        <Grid ColumnSpacing="16"
-            Margin="0,8">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="1" />
-            </Grid.RowDefinitions>
-            <!--<Label x:Name="HiddenLabel"
-                FontSize="10"
-                IsVisible="False"
-                Margin="0" />-->
-            <views:BorderlessEntry x:Name="EntryField"
-                Text="{Binding Text, Mode=TwoWay}"
-                Margin="0,12,0,0" />
-            <BoxView Grid.RowSpan="2"
-                Margin="0"
-                HorizontalOptions="FillAndExpand" />
-            <!--<BoxView x:Name="BottomBorder"
-                Grid.Row="1"
-                HeightRequest="1"
-                Margin="0"
-                HorizontalOptions="FillAndExpand" />
-            <BoxView x:Name="HiddenBottomBorder"
-                Grid.Row="1"
-                HeightRequest="1"
-                Margin="0"
-                WidthRequest="0"
-                HorizontalOptions="Center" />-->
-        </Grid>
-    </ContentView.Content>
-</ContentView>
+    x:Class="XFRun.UI.Forms.TextBox"
+    FillColor="Gray"
+    RoundedCornerRadius="15"
+    x:Name="root">
+    <Grid Margin="0,8"
+        Padding="3">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <!--<Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+                        <RowDefinition Height="1" />
+        </Grid.RowDefinitions>-->
+        <Image x:Name="imgLeftIcon"
+            />
+        <views:BorderlessEntry x:Name="EntryField"
+            Grid.Column="1"
+            Margin="3,0"
+            Grid.ColumnSpan="2"
+            Text="{Binding Text, Mode=TwoWay}"
+            VerticalOptions="FillAndExpand"
+            Placeholder="xamamam" />
+    </Grid>
+</views:RoundedCornerView>

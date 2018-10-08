@@ -60,6 +60,7 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="BorderlessEntryRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -83,6 +84,7 @@
     <AndroidResource Include="Resources\mipmap-xxhdpi\launcher_foreground.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\Icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\drawable\baseline_account_circle_black_18dp.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
@@ -95,6 +97,14 @@
     <ProjectReference Include="..\XFRun.UI.Sample\XFRun.UI.Sample.csproj">
       <Project>{BD9A7C8B-8838-4913-89D2-4D3F37389493}</Project>
       <Name>XFRun.UI.Sample</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\XFRun.UI.Android\XFRun.UI.Android.csproj">
+      <Project>{0884AFAA-4264-4C4E-9673-337CF2133342}</Project>
+      <Name>XFRun.UI.Android</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\XFRun.UI\XFRun.UI.Forms.csproj">
+      <Project>{5C9E8E03-A6D8-4C7F-B880-A07D96967E29}</Project>
+      <Name>XFRun.UI.Forms</Name>
     </ProjectReference>
   </ItemGroup>
  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

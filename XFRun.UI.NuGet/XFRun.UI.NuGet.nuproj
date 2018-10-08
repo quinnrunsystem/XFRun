@@ -38,7 +38,7 @@
     </ProjectReference>
     <ProjectReference Include="..\XFRun.UI\XFRun.UI.csproj">
       <Project>{5C9E8E03-A6D8-4C7F-B880-A07D96967E29}</Project>
-      <Name>XFRun.UI</Name>
+      <Name>XFRun.UI.Forms</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using XFRun.UI.Forms.Renderers;
 
-namespace XFRun.UI
+namespace XFRun.UI.Forms
 {
-    public partial class TextBox : ContentView
+    public partial class TextBox : RoundedCornerView
     {
         #region Events
         public event EventHandler<FocusEventArgs> EntryFocused;
@@ -72,10 +73,33 @@ namespace XFRun.UI
         {
             var matEntry = (TextBox)bindable;
             matEntry.Completed = (EventHandler)newValue;
+
         });
+
+        //public static BindableProperty LeftIconProperty = BindableProperty.Create(nameof(LeftIconProperty), typeof(string), typeof(TextBox), null);
+
+        public static readonly BindableProperty LeftIconProperty = BindableProperty.Create(
+            nameof(LeftIconProperty), //Public name to use
+                                                           typeof(string), //this type
+            typeof(TextBox), //parent type (tihs control)
+                                                           string.Empty); //default value
+
         #endregion
 
         #region Public Properties
+
+        public string LeftIcon
+        {
+            get
+            {
+                return (string)GetValue(LeftIconProperty);
+            }
+            set
+            {
+                //imgLeftIcon.Source = ImageSource.FromUri(new Uri(value,UriKind.RelativeOrAbsolute));
+                SetValue(LeftIconProperty, value);
+            }
+        }
 
         public bool IsValid
         {
@@ -224,6 +248,7 @@ namespace XFRun.UI
             set => EntryField.Completed += value;
         }
 
+
         #endregion
 
         public TextBox()
@@ -239,20 +264,20 @@ namespace XFRun.UI
             EntryField.Focused += (s, a) =>
            {
                EntryFocused?.Invoke(this, a);
-                //await CalculateLayoutFocused();
+               //await CalculateLayoutFocused();
 
-            };
+           };
             EntryField.Unfocused += (s, a) =>
            {
                EntryUnfocused?.Invoke(this, a);
-                //await CalculateLayoutUnfocused();
-            };
+               //await CalculateLayoutUnfocused();
+           };
             EntryField.PropertyChanged += (sender, args) =>
            {
                if (args.PropertyName == nameof(EntryField.Text) && !EntryField.IsFocused && !String.IsNullOrEmpty(EntryField.Text))
                {
-                    //await CalculateLayoutUnfocused();
-                }
+                   //await CalculateLayoutUnfocused();
+               }
            };
 
             //UpdateValidation();

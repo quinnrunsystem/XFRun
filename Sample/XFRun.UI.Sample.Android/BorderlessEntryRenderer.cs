@@ -1,21 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Android.App;
 using Android.Content;
-using Android.OS;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
-using Xamarin.Forms.Platform.Android;
 using Xamarin.Forms;
-using XFRun.UI.Android.Renderers;
-using XFRun.UI.Forms.Renderers;
+using Xamarin.Forms.Platform.Android;
 
-[assembly: ExportRenderer(typeof(BorderlessEntry), typeof(BorderlessEntryRenderer))]
-namespace XFRun.UI.Android.Renderers
+namespace XFRun.UI.Sample.Droid
 {
     public class BorderlessEntryRenderer : EntryRenderer
     {

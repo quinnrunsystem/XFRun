@@ -1,8 +1,6 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "XFRun.UI.Shared", "XFRun.UI.Shared\XFRun.UI.Shared.shproj", "{D6C3F8AE-F6A2-4867-AE75-24A03F7EDD7E}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XFRun.UI.iOS", "XFRun.UI.iOS\XFRun.UI.iOS.csproj", "{D2EB8B04-0322-4C7E-B346-F0BAE977E64A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XFRun.UI.Android", "XFRun.UI.Android\XFRun.UI.Android.csproj", "{0884AFAA-4264-4C4E-9673-337CF2133342}"
@@ -17,7 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XFRun.UI.Sample.iOS", "Samp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XFRun.UI.Sample", "Sample\XFRun.UI.Sample\XFRun.UI.Sample.csproj", "{BD9A7C8B-8838-4913-89D2-4D3F37389493}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XFRun.UI", "XFRun.UI\XFRun.UI.csproj", "{5C9E8E03-A6D8-4C7F-B880-A07D96967E29}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XFRun.UI.Forms", "XFRun.UI\XFRun.UI.Forms.csproj", "{5C9E8E03-A6D8-4C7F-B880-A07D96967E29}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

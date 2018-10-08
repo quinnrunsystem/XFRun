@@ -2,16 +2,24 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:XFRun.UI.Sample"
-    xmlns:ui="clr-namespace:XFRun.UI;assembly=XFRun.UI"
+    xmlns:ui="clr-namespace:XFRun.UI.Forms;assembly=XFRun.UI.Forms"
     x:Class="XFRun.UI.Sample.MainPage">
     <Grid>
-        <StackLayout VerticalOptions="CenterAndExpand" Margin="20">
+        <StackLayout VerticalOptions="CenterAndExpand"
+            Margin="20">
             <!-- Place new controls here -->
             <Label Text="Welcome to Xamarin.Forms!"
                 HorizontalOptions="Center"
                 VerticalOptions="CenterAndExpand" />
-            <ui:TextBox AccentColor="Blue"
-                Placeholder="Placeholder"/>
+            <ui:TextBox FillColor="Gray"
+                LeftIcon="baseline_account_circle_black_18dp"
+                Placeholder="Placeholder"
+                MakeCircle="false"
+                RoundedCornerRadius="15"
+                TextColor="Aqua"
+                PlaceholderColor="Silver"
+                BorderWidth="1"
+                BorderColor="Lime" />
         </StackLayout>
     </Grid>
 </ContentPage>
