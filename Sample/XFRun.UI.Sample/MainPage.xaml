@@ -12,8 +12,8 @@
                 HorizontalOptions="Center"
                 VerticalOptions="CenterAndExpand" />
             <ui:TextBox FillColor="Gray"
+                        Placeholder="Text placeholder "
                 LeftIcon="baseline_account_circle_black_18dp"
-                Placeholder="Placeholder"
                 MakeCircle="false"
                 RoundedCornerRadius="15"
                 TextColor="Aqua"

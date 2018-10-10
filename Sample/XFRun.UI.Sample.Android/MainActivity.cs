@@ -6,7 +6,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
-using XFRun.UI.Android;
+using XFRun.UI.Droid;
 
 namespace XFRun.UI.Sample.Droid
 {
