@@ -25,6 +25,8 @@ namespace XFRun.UI.Sample.Droid
                 Control.LayoutParameters = layoutParams;
                 Control.SetPadding(0, 0, 0, 0);
                 SetPadding(0, 0, 0, 0);
+
+                //var item=  Resource.Layout.Layout;
             }
         }
     }

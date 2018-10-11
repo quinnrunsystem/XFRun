@@ -5,11 +5,11 @@ using Android.Graphics.Drawables;
 using Android.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
-using XFRun.UI.Android.Renderers;
+using XFRun.UI.Droid.Renderers;
 using XFRun.UI.Forms.Renderers;
 
 [assembly: ExportRenderer(typeof(RoundedCornerView), typeof(RoundedCornerViewRenderer))]
-namespace XFRun.UI.Android.Renderers
+namespace XFRun.UI.Droid.Renderers
 {
     public class RoundedCornerViewRenderer : ViewRenderer
     {

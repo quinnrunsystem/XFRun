@@ -28,10 +28,6 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\XFRun.UI.Android\XFRun.UI.Android.csproj">
-      <Project>{0884AFAA-4264-4C4E-9673-337CF2133342}</Project>
-      <Name>XFRun.UI.Android</Name>
-    </ProjectReference>
     <ProjectReference Include="..\XFRun.UI.iOS\XFRun.UI.iOS.csproj">
       <Project>{D2EB8B04-0322-4C7E-B346-F0BAE977E64A}</Project>
       <Name>XFRun.UI.iOS</Name>

@@ -76,13 +76,13 @@ namespace XFRun.UI.Forms
 
         });
 
-        //public static BindableProperty LeftIconProperty = BindableProperty.Create(nameof(LeftIconProperty), typeof(string), typeof(TextBox), null);
+        public static BindableProperty LeftIconProperty = BindableProperty.Create(nameof(LeftIconProperty), typeof(string), typeof(TextBox), propertyChanged: (bindable, oldValue, newValue) =>
+         {
+            var textBox = (TextBox)bindable;
+            textBox.imgLeftIcon.Source = ImageSource.FromFile((string)newValue);
+         });
 
-        public static readonly BindableProperty LeftIconProperty = BindableProperty.Create(
-            nameof(LeftIconProperty), //Public name to use
-                                                           typeof(string), //this type
-            typeof(TextBox), //parent type (tihs control)
-                                                           string.Empty); //default value
+
 
         #endregion
 
@@ -96,7 +96,7 @@ namespace XFRun.UI.Forms
             }
             set
             {
-                //imgLeftIcon.Source = ImageSource.FromUri(new Uri(value,UriKind.RelativeOrAbsolute));
+                imgLeftIcon.Source = ImageSource.FromFile(value);
                 SetValue(LeftIconProperty, value);
             }
         }

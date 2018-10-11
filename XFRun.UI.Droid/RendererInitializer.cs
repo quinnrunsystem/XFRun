@@ -1,7 +1,7 @@
 ﻿using System;
-using XFRun.UI.Android.Renderers;
+using XFRun.UI.Droid.Renderers;
 
-namespace XFRun.UI.Android
+namespace XFRun.UI.Droid
 {
     public class RendererInitializer
     {

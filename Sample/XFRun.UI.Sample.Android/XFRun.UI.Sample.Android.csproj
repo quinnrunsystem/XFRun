@@ -98,13 +98,13 @@
       <Project>{BD9A7C8B-8838-4913-89D2-4D3F37389493}</Project>
       <Name>XFRun.UI.Sample</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\XFRun.UI.Android\XFRun.UI.Android.csproj">
-      <Project>{0884AFAA-4264-4C4E-9673-337CF2133342}</Project>
-      <Name>XFRun.UI.Android</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\XFRun.UI\XFRun.UI.Forms.csproj">
       <Project>{5C9E8E03-A6D8-4C7F-B880-A07D96967E29}</Project>
       <Name>XFRun.UI.Forms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\XFRun.UI.Droid\XFRun.UI.Droid.csproj">
+      <Project>{946C6EA0-FF44-4032-9FE4-183AE731F55D}</Project>
+      <Name>XFRun.UI.Droid</Name>
     </ProjectReference>
   </ItemGroup>
  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

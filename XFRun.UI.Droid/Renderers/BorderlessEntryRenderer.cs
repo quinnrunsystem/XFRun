@@ -11,11 +11,11 @@ using Android.Views;
 using Android.Widget;
 using Xamarin.Forms.Platform.Android;
 using Xamarin.Forms;
-using XFRun.UI.Android.Renderers;
+using XFRun.UI.Droid.Renderers;
 using XFRun.UI.Forms.Renderers;
 
 [assembly: ExportRenderer(typeof(BorderlessEntry), typeof(BorderlessEntryRenderer))]
-namespace XFRun.UI.Android.Renderers
+namespace XFRun.UI.Droid.Renderers
 {
     public class BorderlessEntryRenderer : EntryRenderer
     {
