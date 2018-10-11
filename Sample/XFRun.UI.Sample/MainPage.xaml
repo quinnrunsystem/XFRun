@@ -10,7 +10,7 @@
         <StackLayout VerticalOptions="CenterAndExpand"
             Margin="20">
             <!-- Place new controls here -->
-            <Label Text="Welcome to Xamarin.Forms!"
+            <!--<Label Text="Welcome to Xamarin.Forms!"
                 HorizontalOptions="Center"
                 VerticalOptions="CenterAndExpand" />
             <ui:TextBox FillColor="Gray"
@@ -21,37 +21,7 @@
                 TextColor="Aqua"
                 PlaceholderColor="Silver"
                 BorderWidth="1"
-                BorderColor="Lime" />
-            <controls:BindableRadioGroup x:Name="ansPicker"
-                                     Grid.Row="1"
-                                     FontName="AmericanTypewriter"
-                                     TextColor="White"
-                                     VerticalOptions="Start" />
-            <controls:CustomRadioButton x:Name="xxx"
-                                     Grid.Row="1"
-                                     FontName="AmericanTypewriter"
-                                     TextColor="White"
-                                         Text="xxxx"
-                                         
-                                     VerticalOptions="Start" />
-           <renderers:CheckBox DefaultText="Default text"
-                           FontName="AmericanTypewriter"
-                           FontSize="25"
-                           HorizontalOptions="FillAndExpand"
-                           TextColor="Green" />
-        <renderers:CheckBox CheckedText="Checked"
-                           DefaultText="Default text"
-                           HorizontalOptions="FillAndExpand"
-                           TextColor="Blue"
-                           UncheckedText="Unchecked" />
-        <renderers:CheckBox
-                BackgroundColor="Red"
-                DefaultText="This is a very long string. A very long string. A really very long string. This is a very long string. A very long string. A really very long string. This is a very long string. A very long string. A really very long string."
-                           HorizontalOptions="FillAndExpand"
-                           TextColor="Blue" />
-        <renderers:CheckBox DefaultText="Normal length text again."
-                           FontSize="25"
-                           HorizontalOptions="FillAndExpand"/>
+                BorderColor="Lime" />-->
         </StackLayout>
     </Grid>
 </ContentPage>

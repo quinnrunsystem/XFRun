@@ -147,4 +147,15 @@ Global
 		{52FE63C0-6177-40E2-B7C5-EE9CF4204E84} = {30F68F6F-075C-4C3E-8281-34B398A2F345}
 		{BD9A7C8B-8838-4913-89D2-4D3F37389493} = {30F68F6F-075C-4C3E-8281-34B398A2F345}
 	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		Policies = $0
+		$0.TextStylePolicy = $1
+		$1.inheritsSet = null
+		$1.scope = application/xml
+		$0.XmlFormattingPolicy = $2
+		$2.DefaultFormat = $3
+		$3.AttributesInNewLine = True
+		$3.AlignAttributes = True
+		$2.scope = application/xml
+	EndGlobalSection
 EndGlobal

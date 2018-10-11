@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns:renderers="clr-namespace:XFRun.UI.Forms.Renderers;assembly=XFRun.UI.Forms"
+    xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="XFRun.UI.Sample.CheckBoxPage">
+    <ContentPage.Content>
+    </ContentPage.Content>
+    <StackLayout>
+        <renderers:CheckBox DefaultText="Default text"
+                           FontName="AmericanTypewriter"
+                           FontSize="25"
+                           HorizontalOptions="FillAndExpand"
+                           TextColor="Green" />
+        <renderers:CheckBox CheckedText="Checked"
+                           DefaultText="Default text"
+                           HorizontalOptions="FillAndExpand"
+                           TextColor="Blue"
+                           UncheckedText="Unchecked" />
+        <renderers:CheckBox
+                BackgroundColor="Red"
+                DefaultText="This is a very long string. A very long string. A really very long string. This is a very long string. A very long string. A really very long string. This is a very long string. A very long string. A really very long string."
+                           HorizontalOptions="FillAndExpand"
+                           TextColor="Blue" />
+        <renderers:CheckBox DefaultText="Normal length text again."
+                           FontSize="24"
+                           
+                            BackgroundColor="Teal"                          
+                            HorizontalOptions="FillAndExpand"/>
+    </StackLayout>
+    
+    
+</ContentPage>

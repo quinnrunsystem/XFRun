@@ -50,7 +50,7 @@ namespace XFRun.UI.Forms.Renderers.RadioButton
         /// <summary>
         ///     The checked changed event.
         /// </summary>
-        public EventHandler<EventArgs<bool>> CheckedChanged;
+        public event EventHandler<EventArgs<bool>> CheckedChanged;
 
         /// <summary>
         ///     Gets or sets a value indicating whether the control is checked.
@@ -62,14 +62,13 @@ namespace XFRun.UI.Forms.Renderers.RadioButton
 
             set
             {
-                SetValue(CheckedProperty, value);
-
                 var eventHandler = CheckedChanged;
 
-                if (eventHandler != null)
+                if (eventHandler != null && (bool)this.GetValue(CheckedProperty) != value)
                 {
                     eventHandler.Invoke(this, new EventArgs<bool>(value));
                 }
+                SetValue(CheckedProperty, value);
             }
         }
 

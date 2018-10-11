@@ -149,11 +149,12 @@ namespace XFRun.UI.Forms.Renderers.RadioButton
                 }
                 else
                 {
-                    SelectedIndex = selectedItem.Id;
-                    if (CheckedChanged != null)
+
+                    if (CheckedChanged != null && SelectedIndex != selectedItem.Id)
                     {
                         CheckedChanged.Invoke(sender, item.Id);
                     }
+                    SelectedIndex = selectedItem.Id;
                 }
             }
         }
