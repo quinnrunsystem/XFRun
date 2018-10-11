@@ -92,8 +92,11 @@ namespace XFRun.UI.iOS.Renderers.CheckBox
         /// </summary>
         void ApplyStyle()
         {
-            SetImage(UIImage.FromBundle("Images/Checkbox/checked_checkbox.png"), UIControlState.Selected);
-            SetImage(UIImage.FromBundle("Images/Checkbox/unchecked_checkbox.png"), UIControlState.Normal);
+            var imgChecked = UIImage.FromBundle("Images/Checkbox/checked_checkbox");
+            var imgUnChecked = UIImage.FromBundle("Images/Checkbox/unchecked_checkbox");
+            var x = UIImage.FromFile("Images/Checkbox/unchecked_checkbox");
+            SetImage(imgChecked, UIControlState.Selected);
+            SetImage(imgUnChecked, UIControlState.Normal);
         }
     }
 }
