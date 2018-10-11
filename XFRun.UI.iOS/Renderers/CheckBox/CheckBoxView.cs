@@ -83,6 +83,7 @@ namespace XFRun.UI.iOS.Renderers.CheckBox
             const float Inset = 8f;
 
             HorizontalAlignment = UIControlContentHorizontalAlignment.Left;
+            VerticalAlignment = UIControlContentVerticalAlignment.Center;
             ImageEdgeInsets = new UIEdgeInsets(0f, Inset, 0f, 0f);
             TitleEdgeInsets = new UIEdgeInsets(0f, Inset * 2, 0f, 0f);
         }

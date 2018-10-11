@@ -43,7 +43,7 @@ namespace XFRun.UI.iOS.Extensions
         {
             return text.ToNativeString().GetBoundingRect(
                 new CGSize(width, nfloat.MaxValue),
-                NSStringDrawingOptions.OneShot,//.UsesFontLeading | NSStringDrawingOptions.UsesLineFragmentOrigin,
+                NSStringDrawingOptions.UsesFontLeading | NSStringDrawingOptions.UsesLineFragmentOrigin,
                 new UIStringAttributes { Font = font },
                 null);
         }

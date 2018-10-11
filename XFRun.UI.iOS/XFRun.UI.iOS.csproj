@@ -81,8 +81,6 @@
   <ItemGroup>
     <Folder Include="Renderers\" />
     <Folder Include="Renderers\CheckBox\" />
-    <Folder Include="Images\" />
-    <Folder Include="Images\CheckBox\" />
     <Folder Include="Extensions\" />
   </ItemGroup>
   <ItemGroup>
@@ -92,10 +90,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Images\CheckBox\checked_checkbox.png" />
-    <BundleResource Include="Images\CheckBox\checked_checkbox%402x.png" />
-    <BundleResource Include="Images\CheckBox\unchecked_checkbox.png" />
-    <BundleResource Include="Images\CheckBox\unchecked_checkbox%402x.png" />
     <None Include="packages.config" />
     <BundleResource Include="Resources\checked_checkbox.png" />
     <BundleResource Include="Resources\checked_checkbox%402x.png" />

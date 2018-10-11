@@ -34,8 +34,8 @@ namespace XFRun.UI.iOS.Renderers.CheckBox
                     defaultTextColor = checkBox.TitleColor(UIControlState.Normal);
                     SetNativeControl(checkBox);
                 }
-                Control.LineBreakMode = UILineBreakMode.CharacterWrap;
-                Control.VerticalAlignment = UIControlContentVerticalAlignment.Top;
+                Control.LineBreakMode = UILineBreakMode.WordWrap;
+                Control.VerticalAlignment = UIControlContentVerticalAlignment.Center;
                 Control.CheckedTitle = string.IsNullOrEmpty(e.NewElement.CheckedText) ? e.NewElement.DefaultText : e.NewElement.CheckedText;
                 Control.UncheckedTitle = string.IsNullOrEmpty(e.NewElement.UncheckedText) ? e.NewElement.DefaultText : e.NewElement.UncheckedText;
                 Control.Checked = e.NewElement.Checked;

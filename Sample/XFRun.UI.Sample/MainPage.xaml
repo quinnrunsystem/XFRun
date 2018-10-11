@@ -34,7 +34,7 @@
                                          Text="xxxx"
                                          
                                      VerticalOptions="Start" />
-            <renderers:CheckBox DefaultText="Default text"
+           <renderers:CheckBox DefaultText="Default text"
                            FontName="AmericanTypewriter"
                            FontSize="25"
                            HorizontalOptions="FillAndExpand"
