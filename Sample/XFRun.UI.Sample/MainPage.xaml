@@ -44,7 +44,9 @@
                            HorizontalOptions="FillAndExpand"
                            TextColor="Blue"
                            UncheckedText="Unchecked" />
-        <renderers:CheckBox DefaultText="This is a very long string. A very long string. A really very long string."
+        <renderers:CheckBox
+                BackgroundColor="Red"
+                DefaultText="This is a very long string. A very long string. A really very long string. This is a very long string. A very long string. A really very long string. This is a very long string. A very long string. A really very long string."
                            HorizontalOptions="FillAndExpand"
                            TextColor="Blue" />
         <renderers:CheckBox DefaultText="Normal length text again."

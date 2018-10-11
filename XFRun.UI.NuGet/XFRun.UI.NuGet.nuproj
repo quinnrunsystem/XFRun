@@ -28,13 +28,17 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\XFRun.UI.iOS\XFRun.UI.iOS.csproj">
-      <Project>{D2EB8B04-0322-4C7E-B346-F0BAE977E64A}</Project>
-      <Name>XFRun.UI.iOS</Name>
-    </ProjectReference>
     <ProjectReference Include="..\XFRun.UI\XFRun.UI.csproj">
       <Project>{5C9E8E03-A6D8-4C7F-B880-A07D96967E29}</Project>
       <Name>XFRun.UI.Forms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XFRun.UI.Droid\XFRun.UI.Droid.csproj">
+      <Project>{946C6EA0-FF44-4032-9FE4-183AE731F55D}</Project>
+      <Name>XFRun.UI.Droid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XFRun.UI.iOS\XFRun.UI.iOS.csproj">
+      <Project>{0597B859-2BEB-4F68-98C7-F1DDBB6EDFC7}</Project>
+      <Name>XFRun.UI.iOS</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
