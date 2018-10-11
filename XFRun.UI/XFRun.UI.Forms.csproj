@@ -18,6 +18,8 @@
     <Folder Include="Renderers\" />
     <Folder Include="Services\" />
     <Folder Include="Services\Media\" />
+    <Folder Include="Renderers\RadioButton\" />
+    <Folder Include="Helpers\" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Mono.Android">

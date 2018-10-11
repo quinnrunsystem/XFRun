@@ -15,6 +15,7 @@
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
     <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
   </PropertyGroup>
+  
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
@@ -119,12 +120,17 @@
     <Compile Include="RendererInitializer.cs" />
     <Compile Include="Renderers\ExtendedFrameRenderer.cs" />
     <Compile Include="Renderers\RoundedCornerViewRenderer.cs" />
+    <Compile Include="Extensions\FontExtensions.cs" />
+    <Compile Include="Renderers\RadioButtonRenderer.cs" />
+    <Compile Include="Renderers\CheckBoxRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Renderers\" />
+    <Folder Include="Extensions\" />
+    <Folder Include="Resources\layout\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\XFRun.UI\XFRun.UI.Forms.csproj">

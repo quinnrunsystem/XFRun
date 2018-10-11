@@ -62,18 +62,32 @@
     <Compile Include="RendererInitializer.cs" />
     <Compile Include="Renderers\ExtendedFrameRenderer.cs" />
     <Compile Include="Renderers\RoundedCornerViewRenderer.cs" />
+    <Compile Include="Renderers\CheckBox\CheckBoxRenderer.cs" />
+    <Compile Include="Renderers\CheckBox\CheckBoxView.cs" />
+    <Compile Include="Extensions\StringExtensios.cs" />
+    <Compile Include="Extensions\ColorExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Renderers\" />
+    <Folder Include="Renderers\CheckBox\" />
+    <Folder Include="Images\" />
+    <Folder Include="Images\CheckBox\" />
+    <Folder Include="Extensions\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\XFRun.UI\XFRun.UI.Forms.csproj">
       <Project>{5C9E8E03-A6D8-4C7F-B880-A07D96967E29}</Project>
       <Name>XFRun.UI.Forms</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Images\CheckBox\checked_checkbox.png" />
+    <BundleResource Include="Images\CheckBox\checked_checkbox%402x.png" />
+    <BundleResource Include="Images\CheckBox\unchecked_checkbox.png" />
+    <BundleResource Include="Images\CheckBox\unchecked_checkbox%402x.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\NuGet.Build.Packaging.0.2.2\build\NuGet.Build.Packaging.targets" Condition="Exists('..\packages\NuGet.Build.Packaging.0.2.2\build\NuGet.Build.Packaging.targets')" />

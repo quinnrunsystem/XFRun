@@ -3,6 +3,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:XFRun.UI.Sample"
     xmlns:ui="clr-namespace:XFRun.UI.Forms;assembly=XFRun.UI.Forms"
+             xmlns:renderers="clr-namespace:XFRun.UI.Forms.Renderers;assembly=XFRun.UI.Forms"
+             xmlns:controls="clr-namespace:XFRun.UI.Forms.Renderers.RadioButton;assembly=XFRun.UI.Forms"
     x:Class="XFRun.UI.Sample.MainPage">
     <Grid>
         <StackLayout VerticalOptions="CenterAndExpand"
@@ -20,6 +22,34 @@
                 PlaceholderColor="Silver"
                 BorderWidth="1"
                 BorderColor="Lime" />
+            <controls:BindableRadioGroup x:Name="ansPicker"
+                                     Grid.Row="1"
+                                     FontName="AmericanTypewriter"
+                                     TextColor="White"
+                                     VerticalOptions="Start" />
+            <controls:CustomRadioButton x:Name="xxx"
+                                     Grid.Row="1"
+                                     FontName="AmericanTypewriter"
+                                     TextColor="White"
+                                         Text="xxxx"
+                                         
+                                     VerticalOptions="Start" />
+            <renderers:CheckBox DefaultText="Default text"
+                           FontName="AmericanTypewriter"
+                           FontSize="25"
+                           HorizontalOptions="FillAndExpand"
+                           TextColor="Green" />
+        <renderers:CheckBox CheckedText="Checked"
+                           DefaultText="Default text"
+                           HorizontalOptions="FillAndExpand"
+                           TextColor="Blue"
+                           UncheckedText="Unchecked" />
+        <renderers:CheckBox DefaultText="This is a very long string. A very long string. A really very long string."
+                           HorizontalOptions="FillAndExpand"
+                           TextColor="Blue" />
+        <renderers:CheckBox DefaultText="Normal length text again."
+                           FontSize="25"
+                           HorizontalOptions="FillAndExpand"/>
         </StackLayout>
     </Grid>
 </ContentPage>
