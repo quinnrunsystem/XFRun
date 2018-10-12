@@ -129,6 +129,18 @@
     <Compile Include="Renderers\RadioButtonRenderer.cs" />
     <Compile Include="Renderers\CheckBoxRenderer.cs" />
     <Compile Include="Renderers\ExtendedLabelRenderer.cs" />
+    <Compile Include="Renderers\Calendar\CalendarViewRenderer.cs" />
+    <Compile Include="Renderers\Calendar\MonoDroid.TimesSquare\CalendarArrowView.cs" />
+    <Compile Include="Renderers\Calendar\MonoDroid.TimesSquare\CalendarCellView.cs" />
+    <Compile Include="Renderers\Calendar\MonoDroid.TimesSquare\CalendarGridView.cs" />
+    <Compile Include="Renderers\Calendar\MonoDroid.TimesSquare\StyleDescriptor.cs" />
+    <Compile Include="Renderers\Calendar\MonoDroid.TimesSquare\MonthDescriptor.cs" />
+    <Compile Include="Renderers\Calendar\MonoDroid.TimesSquare\MonthCellDescriptor.cs" />
+    <Compile Include="Renderers\Calendar\MonoDroid.TimesSquare\MonthView.cs" />
+    <Compile Include="Renderers\Calendar\MonoDroid.TimesSquare\CalendarMonthPageTransformer.cs" />
+    <Compile Include="Renderers\Calendar\MonoDroid.TimesSquare\CalendarPickerView.cs" />
+    <Compile Include="Renderers\Calendar\MonoDroid.TimesSquare\CalendarRowView.cs" />
+    <Compile Include="Renderers\Calendar\MonoDroid.TimesSquare\MonthAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -139,7 +151,19 @@
     <Folder Include="Extensions\" />
     <Folder Include="Resources\layout\" />
     <AndroidResource Include="Resources\values\Strings.xml" />
+    <AndroidResource Include="Resources\values\colors.xml" />
+    <AndroidResource Include="Resources\values\dimens.xml" />
     <Folder Include="fonts\" />
+    <Folder Include="Renderers\Calendar\" />
+    <Folder Include="Renderers\Calendar\MonoDroid.TimesSquare\" />
+    <AndroidResource Include="Resources\layout\calendar_picker.xml" />
+    <AndroidResource Include="Resources\layout\month.xml" />
+    <Folder Include="Resources\color\" />
+    <AndroidResource Include="Resources\color\calendar_text_selector.xml" />
+    <AndroidResource Include="Resources\values\styles.xml" />
+    <AndroidResource Include="Resources\layout\week.xml" />
+    <Folder Include="Resources\drawable\" />
+    <AndroidResource Include="Resources\drawable\calendar_bg_selector.xml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\XFRun.UI\XFRun.UI.Forms.csproj">

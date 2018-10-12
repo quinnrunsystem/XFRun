@@ -6,32 +6,12 @@
              xmlns:renderers="clr-namespace:XFRun.UI.Forms.Renderers;assembly=XFRun.UI.Forms"
              xmlns:controls="clr-namespace:XFRun.UI.Forms.Renderers.RadioButton;assembly=XFRun.UI.Forms"
     x:Class="XFRun.UI.Sample.MainPage">
-    <Grid>
-        <StackLayout VerticalOptions="CenterAndExpand"
-            Margin="20">
-            <!-- Place new controls here -->
-            <!--<Label Text="Welcome to Xamarin.Forms!"
-                HorizontalOptions="Center"
-                VerticalOptions="CenterAndExpand" />
-            <ui:TextBox FillColor="Gray"
-                        Placeholder="Text placeholder "
-                LeftIcon="baseline_account_circle_black_18dp"
-                MakeCircle="false"
-                RoundedCornerRadius="15"
-                TextColor="Aqua"
-                PlaceholderColor="Silver"
-                BorderWidth="1"
-                BorderColor="Lime" />-->
-            <renderers:ExtendedLabel
-                FontFamily="Open 24 Display St"
-                                        FontSize="30"
-                                        HorizontalOptions="StartAndExpand"
-                                         IsUnderline="false"
-                                         IsDropShadow="true"
-                                         IsStrikeThrough="true"
-                                         TextColor="Lime"
-                                         DropShadowColor="Fuchsia"
-                                        Text="This uses 'FontName' = 'Open 24 Display St' set in XAML and 'FriendlyFontName' properties, size 20" />
-        </StackLayout>
-    </Grid>
+    <StackLayout x:Name="xxx"
+                 BackgroundColor="Lime">
+        <!--<renderers:CalendarView
+            x:Name="calendar"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+        />-->
+    </StackLayout>
 </ContentPage>
