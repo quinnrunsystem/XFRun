@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns:renderers="clr-namespace:XFRun.UI.Forms.Renderers;assembly=XFRun.UI.Forms"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="XFRun.UI.Sample.ExtendedLabelPage">
+    <ContentPage.Content>
+    </ContentPage.Content>
+    <StackLayout>
+        <ScrollView>
+                <StackLayout>
+                    <renderers:ExtendedLabel HorizontalOptions="StartAndExpand" Text="Plain unspecified Extended Label" />
+                <renderers:ExtendedLabel HorizontalOptions="StartAndExpand"
+                                        IsStrikeThrough="True"
+                                         
+                                        Text="Text with strikethrough - no font or size size specified" />
+                <renderers:ExtendedLabel FontSize="14"
+                                        HorizontalOptions="StartAndExpand"
+                                        IsStrikeThrough="True"
+                                        Text="Text with strikethrough size 14" />
+                <renderers:ExtendedLabel FontSize="20"
+                                        HorizontalOptions="StartAndExpand"
+                                        IsStrikeThrough="True"
+                                        Text="Text with strikethrough 20" />
+                <renderers:ExtendedLabel FontFamily="Open 24 Display St"
+                                        FontSize="30"
+                                        HorizontalOptions="StartAndExpand"
+                                         IsUnderline="false"
+                                         IsDropShadow="true"
+                                         IsStrikeThrough="true"
+                                         TextColor="Lime"
+                                         DropShadowColor="Fuchsia"
+                                        Text="This uses 'FontName' = 'Open 24 Display St' set in XAML and 'FriendlyFontName' properties, size 20" />
+                <renderers:ExtendedLabel FontFamily="Open 24 Display St"
+                                        FontSize="20"
+                                        HorizontalOptions="StartAndExpand"
+                                        IsStrikeThrough="True"
+                                        Text="As above, but now with Strikethrough" />
+                <renderers:ExtendedLabel FontFamily="Open 24 Display St"
+                                        FontSize="14"
+                                        HorizontalOptions="StartAndExpand"
+                                        Text="This uses 'FontName' = 'Open 24 Display St.ttf'. Size 14" />
+                <renderers:ExtendedLabel Font="Medium"
+                                        FontFamily="Open 24 Display St"
+                                        HorizontalOptions="StartAndExpand"
+                                        Text="This uses 'FontName' = 'Open 24 Display St.ttf'. Size is Xamarin Medium" />
+                <renderers:ExtendedLabel Font="Large"
+                                        FontFamily="Open 24 Display St"
+                                        HorizontalOptions="StartAndExpand"
+                                        Text="This uses 'FontName' = 'Open 24 Display St.ttf'. Size is Xamarin Large" />
+                <!--<renderers:ExtendedLabel FontName="CODE2000"
+                                        FontSize="14"
+                                        HorizontalOptions="StartAndExpand"
+                                        Text="This 'FontName' = 'CODE2000', but font does NOT exist, so should default to the system font." />-->
+                </StackLayout>
+                
+              
+        </ScrollView>
+    </StackLayout>
+</ContentPage>

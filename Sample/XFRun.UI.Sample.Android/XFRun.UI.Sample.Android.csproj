@@ -92,6 +92,7 @@
     <Folder Include="Resources\drawable-xhdpi\" />
     <Folder Include="Resources\drawable-xxhdpi\" />
     <Folder Include="Resources\drawable-xxxhdpi\" />
+    <Folder Include="Assets\fonts\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\XFRun.UI.Sample\XFRun.UI.Sample.csproj">
@@ -106,6 +107,9 @@
       <Project>{946C6EA0-FF44-4032-9FE4-183AE731F55D}</Project>
       <Name>XFRun.UI.Droid</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fonts\Open 24 Display St.ttf" />
   </ItemGroup>
  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

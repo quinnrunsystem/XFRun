@@ -2,6 +2,7 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:XFRun.UI.Forms.Renderers.RadioButton;assembly=XFRun.UI.Forms"
     x:Class="XFRun.UI.Sample.RadioButton">
     <ContentPage.Content>
     </ContentPage.Content>
@@ -12,13 +13,13 @@
                                      TextColor="Black"
                                          CheckedChanged="ansPicker_CheckedChanged"
                                      VerticalOptions="Start" />
-            <controls:CustomRadioButton
-                x:Name="xxx"
-                Grid.Row="1"
-                CheckedChanged="Handle_CheckedChanged"
-                FontName="AmericanTypewriter"
-                Text="singleRadioBtn"
-                BackgroundColor="Lime"
-                VerticalOptions="Start" />
+        <controls:CustomRadioButton
+            x:Name="xxx"
+            Grid.Row="1"
+            CheckedChanged="Handle_CheckedChanged"
+            FontName="AmericanTypewriter"
+            Text="singleRadioBtn"
+            BackgroundColor="Lime"
+            VerticalOptions="Start" />
     </StackLayout>
 </ContentPage>

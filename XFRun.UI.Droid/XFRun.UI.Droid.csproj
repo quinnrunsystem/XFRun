@@ -128,6 +128,7 @@
     <Compile Include="Extensions\FontExtensions.cs" />
     <Compile Include="Renderers\RadioButtonRenderer.cs" />
     <Compile Include="Renderers\CheckBoxRenderer.cs" />
+    <Compile Include="Renderers\ExtendedLabelRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -138,12 +139,16 @@
     <Folder Include="Extensions\" />
     <Folder Include="Resources\layout\" />
     <AndroidResource Include="Resources\values\Strings.xml" />
+    <Folder Include="fonts\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\XFRun.UI\XFRun.UI.Forms.csproj">
       <Project>{5C9E8E03-A6D8-4C7F-B880-A07D96967E29}</Project>
       <Name>XFRun.UI.Forms</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="fonts\Open 24 Display St.ttf" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.3.2.0.871581\build\netstandard2.0\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.3.2.0.871581\build\netstandard2.0\Xamarin.Forms.targets')" />

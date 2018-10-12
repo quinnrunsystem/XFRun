@@ -22,6 +22,16 @@
                 PlaceholderColor="Silver"
                 BorderWidth="1"
                 BorderColor="Lime" />-->
+            <renderers:ExtendedLabel
+                FontFamily="Open 24 Display St"
+                                        FontSize="30"
+                                        HorizontalOptions="StartAndExpand"
+                                         IsUnderline="false"
+                                         IsDropShadow="true"
+                                         IsStrikeThrough="true"
+                                         TextColor="Lime"
+                                         DropShadowColor="Fuchsia"
+                                        Text="This uses 'FontName' = 'Open 24 Display St' set in XAML and 'FriendlyFontName' properties, size 20" />
         </StackLayout>
     </Grid>
 </ContentPage>
