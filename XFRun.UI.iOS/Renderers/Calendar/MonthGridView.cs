@@ -121,16 +121,16 @@ namespace XFRun.UI.iOS.Renderers.Calendar
             for (var i = 1; i <= numberOfLastMonthDays; i++)
             {
                 var viewDay = new DateTime(previousMonth.Year, previousMonth.Month, lead);
-                var dayView = new CalendarDayView(_calendarMonthView)
-                {
-                    Frame =
-                                          new CGRect((i - 1) * boxWidth, 0, boxWidth, boxHeight),
-                    Date = viewDay,
-                    Text = lead.ToString()
-                };
-                UpdateDayView(dayView);
-                AddSubview(dayView);
-                DayTiles.Add(dayView);
+                //var dayView = new CalendarDayView(_calendarMonthView)
+                //{
+                //    Frame =
+                //                          new CGRect((i - 1) * boxWidth, 0, boxWidth, boxHeight),
+                //    Date = viewDay,
+                //    Text = lead.ToString()
+                //};
+                //UpdateDayView(dayView);
+                //AddSubview(dayView);
+                //DayTiles.Add(dayView);
                 lead++;
             }
 
@@ -145,30 +145,30 @@ namespace XFRun.UI.iOS.Renderers.Calendar
             for (int i = 1; i <= daysInMonth; i++)
             {
                 var viewDay = new DateTime(_currentMonth.Year, _currentMonth.Month, i);
-                var dayView = new CalendarDayView(_calendarMonthView)
-                {
-                    Frame =
-                                          new CGRect(
-                                          (position - 1) * boxWidth,
-                                          line * boxHeight,
-                                          boxWidth,
-                                          boxHeight),
-                    Today = (CurrentDate.Date == viewDay.Date),
-                    Text = i.ToString(),
-                    Active = true,
-                    Tag = i,
-                    Selected =
-                                          (viewDay.Date == _calendarMonthView.CurrentSelectedDate.Date),
-                    Date = viewDay
-                };
+                //var dayView = new CalendarDayView(_calendarMonthView)
+                //{
+                //    Frame =
+                //                          new CGRect(
+                //                          (position - 1) * boxWidth,
+                //                          line * boxHeight,
+                //                          boxWidth,
+                //                          boxHeight),
+                //    Today = (CurrentDate.Date == viewDay.Date),
+                //    Text = i.ToString(),
+                //    Active = true,
+                //    Tag = i,
+                //    Selected =
+                //                          (viewDay.Date == _calendarMonthView.CurrentSelectedDate.Date),
+                //    Date = viewDay
+                //};
 
-                UpdateDayView(dayView);
+                //UpdateDayView(dayView);
 
-                if (dayView.Selected)
-                    SelectedDayView = dayView;
+                //if (dayView.Selected)
+                //    SelectedDayView = dayView;
 
-                AddSubview(dayView);
-                DayTiles.Add(dayView);
+                //AddSubview(dayView);
+                //DayTiles.Add(dayView);
 
                 position++;
                 if (position > 7)
@@ -185,17 +185,17 @@ namespace XFRun.UI.iOS.Renderers.Calendar
                 for (int i = position; i < 8; i++)
                 {
                     var viewDay = new DateTime(nextMonth.Year, nextMonth.Month, dayCounter);
-                    var dayView = new CalendarDayView(_calendarMonthView)
-                    {
-                        Frame = new CGRect((i - 1) * boxWidth, line * boxHeight, boxWidth, boxHeight),
-                        Text = dayCounter.ToString(),
-                    };
-                    dayView.Date = viewDay;
-                    UpdateDayView(dayView);
+                    //var dayView = new CalendarDayView(_calendarMonthView)
+                    //{
+                    //    Frame = new CGRect((i - 1) * boxWidth, line * boxHeight, boxWidth, boxHeight),
+                    //    Text = dayCounter.ToString(),
+                    //};
+                    //dayView.Date = viewDay;
+                    //UpdateDayView(dayView);
 
-                    AddSubview(dayView);
-                    DayTiles.Add(dayView);
-                    dayCounter++;
+                    //AddSubview(dayView);
+                    //DayTiles.Add(dayView);
+                    //dayCounter++;
                 }
             }
 

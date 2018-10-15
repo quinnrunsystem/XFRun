@@ -96,10 +96,10 @@ namespace XFRun.UI.iOS.Renderers.Calendar
             }
 
             Frame = _showHeader ? new CGRect(0, 0, width, 198 + _headerHeight) : new CGRect(0, 0, width, 198);
-
+            
             BoxWidth = Convert.ToInt32(Math.Ceiling(width / 7));
 
-            BackgroundColor = UIColor.White;
+            BackgroundColor = UIColor.Red;
 
             ClipsToBounds = true;
             CurrentDate = DateTime.Now.Date;
@@ -353,7 +353,7 @@ namespace XFRun.UI.iOS.Renderers.Calendar
             SetNavigationArrows(false);
             LoadInitialGrids();
 
-            BackgroundColor = UIColor.Clear;
+            BackgroundColor = UIColor.Green;
 
             AddSubview(_scrollView);
 
@@ -619,6 +619,7 @@ namespace XFRun.UI.iOS.Renderers.Calendar
             var grid = new MonthGridView(this, date) { CurrentDate = CurrentDate };
             grid.BuildGrid();
             grid.Frame = new CGRect(0, 0, 320, Frame.Height - 16);
+            grid.BackgroundColor = UIColor.Clear;
             return grid;
         }
 
@@ -651,11 +652,11 @@ namespace XFRun.UI.iOS.Renderers.Calendar
             //          DrawString(CurrentMonthYear.ToString("MMMM yyyy"), 
             //              r, _styleDescriptor.MonthTitleFont,
             //              UILineBreakMode.WordWrap, UITextAlignment.Center);
-            DrawCenteredString(
-                (NSString)CurrentMonthYear.ToString("MMMM yyyy"),
-                StyleDescriptor.TitleForegroundColor,
-                r,
-                StyleDescriptor.MonthTitleFont);
+            //DrawCenteredString(
+                //(NSString)CurrentMonthYear.ToString("MMMM yyyy"),
+                //StyleDescriptor.TitleForegroundColor,
+                //r,
+                //StyleDescriptor.MonthTitleFont);
         }
 
         /// <summary>
@@ -664,53 +665,54 @@ namespace XFRun.UI.iOS.Renderers.Calendar
         /// <param name="rect">The rect.</param>
         private void DrawDayLabels(CGRect rect)
         {
-            var font = StyleDescriptor.DateLabelFont;
+            //var font = StyleDescriptor.DateLabelFont;
 
-            var context = UIGraphics.GetCurrentContext();
-            context.SaveState();
-            var firstDayOfWeek = (int)CultureInfo.CurrentCulture.DateTimeFormat.FirstDayOfWeek;
-            var today = CurrentDate;
-            var originalDay = today;
-            for (var i = 0; i < 7; i++)
-            {
-                var offset = firstDayOfWeek - (int)today.DayOfWeek + i;
-                today = today.AddDays(offset);
-                var dateRectangle = new CGRect(i * BoxWidth, 2 + _headerHeight, BoxWidth, 15);
-                if (StyleDescriptor.ShouldHighlightDaysOfWeekLabel && HighlightedDaysOfWeek[(int)today.DayOfWeek])
-                {
-                    context.SetFillColor(StyleDescriptor.HighlightedDateBackgroundColor.CGColor);
-                }
-                else
-                {
-                    context.SetFillColor(StyleDescriptor.DayOfWeekLabelBackgroundColor.CGColor);
-                }
+            //var context = UIGraphics.GetCurrentContext();
+            //context.SaveState();
+            //var firstDayOfWeek = (int)CultureInfo.CurrentCulture.DateTimeFormat.FirstDayOfWeek;
+            //var today = CurrentDate;
+            //var originalDay = today;
+            //for (var i = 0; i < 7; i++)
+            //{
+            //    var offset = firstDayOfWeek - (int)today.DayOfWeek + i;
+            //    today = today.AddDays(offset);
+            //    var dateRectangle = new CGRect(i * BoxWidth, 2 + _headerHeight, BoxWidth, 15);
+            //    if (StyleDescriptor.ShouldHighlightDaysOfWeekLabel && HighlightedDaysOfWeek[(int)today.DayOfWeek])
+            //    {
+            //        context.SetFillColor(StyleDescriptor.HighlightedDateBackgroundColor.CGColor);
+            //    }
+            //    else
+            //    {
+            //        context.SetFillColor(StyleDescriptor.DayOfWeekLabelBackgroundColor.CGColor);
+            //    }
 
-                context.FillRect(dateRectangle);
-                if (StyleDescriptor.ShouldHighlightDaysOfWeekLabel && HighlightedDaysOfWeek[(int)today.DayOfWeek])
-                {
-                    StyleDescriptor.HighlightedDateForegroundColor.SetColor();
-                }
-                else
-                {
-                    StyleDescriptor.DayOfWeekLabelForegroundColor.SetColor();
-                }
+            //    context.FillRect(dateRectangle);
+                
+            //    if (StyleDescriptor.ShouldHighlightDaysOfWeekLabel && HighlightedDaysOfWeek[(int)today.DayOfWeek])
+            //    {
+            //        StyleDescriptor.HighlightedDateForegroundColor.SetColor();
+            //    }
+            //    else
+            //    {
+            //        StyleDescriptor.DayOfWeekLabelForegroundColor.SetColor();
+            //    }
 
-                DrawCenteredString(new NSString(today.ToString("ddd")), UIColor.White, dateRectangle, font);
-                today = originalDay;
-            }
+            //    DrawCenteredString(new NSString(today.ToString("ddd")), StyleDescriptor.DayOfWeekLabelForegroundColor, dateRectangle, font);
+            //    today = originalDay;
+            //}
 
-            //          var i = 0;
-            //          foreach (var d in Enum.GetNames(typeof(DayOfWeek)))
-            //          {
-            //              var dateRectangle = new RectangleF(i*BoxWidth, 2 + headerHeight, BoxWidth, 10);
-            //              context.SetFillColorWithColor(_styleDescriptor.DayOfWeekLabelBackgroundColor.CGColor);
-            //              context.FillRect(dateRectangle);
-            //              _styleDescriptor.DayOfWeekLabelForegroundColor.SetColor();
-            //              DrawString(d.Substring(0, 3),dateRectangle, font,
-            //                  UILineBreakMode.WordWrap, UITextAlignment.Center);
-            //              i++;
-            //          }
-            context.RestoreState();
+            ////          var i = 0;
+            ////          foreach (var d in Enum.GetNames(typeof(DayOfWeek)))
+            ////          {
+            ////              var dateRectangle = new RectangleF(i*BoxWidth, 2 + headerHeight, BoxWidth, 10);
+            ////              context.SetFillColorWithColor(_styleDescriptor.DayOfWeekLabelBackgroundColor.CGColor);
+            ////              context.FillRect(dateRectangle);
+            ////              _styleDescriptor.DayOfWeekLabelForegroundColor.SetColor();
+            ////              DrawString(d.Substring(0, 3),dateRectangle, font,
+            ////                  UILineBreakMode.WordWrap, UITextAlignment.Center);
+            ////              i++;
+            ////          }
+            //context.RestoreState();
         }
 
         /// <summary>
@@ -722,17 +724,17 @@ namespace XFRun.UI.iOS.Renderers.Calendar
         /// <param name="font">The font.</param>
         private static void DrawCenteredString(NSString text, UIColor color, CGRect rect, UIFont font)
         {
-            var paragraphStyle = (NSMutableParagraphStyle)NSParagraphStyle.Default.MutableCopy();
-            paragraphStyle.LineBreakMode = UILineBreakMode.TailTruncation;
-            paragraphStyle.Alignment = UITextAlignment.Center;
-            var attrs = new UIStringAttributes { Font = font, ForegroundColor = color, ParagraphStyle = paragraphStyle };
-            var size = text.GetSizeUsingAttributes(attrs);
-            var targetRect = new CGRect(
-                rect.X + (float)Math.Floor((rect.Width - size.Width) / 2f),
-                rect.Y + (float)Math.Floor((rect.Height - size.Height) / 2f),
-                size.Width,
-                size.Height);
-            text.DrawString(targetRect, attrs);
+            //var paragraphStyle = (NSMutableParagraphStyle)NSParagraphStyle.Default.MutableCopy();
+            //paragraphStyle.LineBreakMode = UILineBreakMode.TailTruncation;
+            //paragraphStyle.Alignment = UITextAlignment.Center;
+            //var attrs = new UIStringAttributes { Font = font, ForegroundColor = color, ParagraphStyle = paragraphStyle };
+            //var size = text.GetSizeUsingAttributes(attrs);
+            //var targetRect = new CGRect(
+            //    rect.X + (float)Math.Floor((rect.Width - size.Width) / 2f),
+            //    rect.Y + (float)Math.Floor((rect.Height - size.Height) / 2f),
+            //    size.Width,
+            //    size.Height);
+            //text.DrawString(targetRect, attrs);
         }
     }
 }

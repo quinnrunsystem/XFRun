@@ -8,10 +8,10 @@
     x:Class="XFRun.UI.Sample.MainPage">
     <StackLayout x:Name="xxx"
                  BackgroundColor="Lime">
-        <!--<renderers:CalendarView
+        <renderers:CalendarView
             x:Name="calendar"
             VerticalOptions="Center"
             HorizontalOptions="Center"
-        />-->
+        />
     </StackLayout>
 </ContentPage>
