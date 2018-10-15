@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<views:RoundedCornerView xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:views="clr-namespace:XFRun.UI.Forms.Renderers"
+    xmlns:local="clr-namespace:XFRun.UI.Forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="XFRun.UI.Forms.PinView"
+    FillColor="Transparent">
+    <views:RoundedCornerView.GestureRecognizers>
+        <TapGestureRecognizer Tapped="Handle_Tapped" />
+    </views:RoundedCornerView.GestureRecognizers>
+    <views:BorderlessEntry x:Name="fakeEntry"
+        Keyboard="Numeric"
+        IsVisible="false"
+        BackgroundColor="Transparent"
+        PlaceholderColor="Transparent"
+        TextColor="Transparent" />
+    <local:FlexLayoutExtend x:Name="flexLayout"
+        Padding="0.2"
+        HeightRequest="50"
+        VerticalOptions="FillAndExpand"
+        HorizontalOptions="FillAndExpand"
+        JustifyContent="SpaceBetween">
+        <!--<local:TextBox/>
+        <local:TextBox/>
+        <local:TextBox/>
+        <local:TextBox/>-->
+        <!-- <views:ExtendedFrame Padding="0.2"
+            WidthRequest="50"
+            HasShadow="false">
+            <Label Text="1"
+                HorizontalTextAlignment="Center" />
+        </views:ExtendedFrame>
+        <views:ExtendedFrame WidthRequest="50"
+            Padding="0.2"
+            HasShadow="false">
+            <Label Text="1"
+                HorizontalTextAlignment="Center" />
+        </views:ExtendedFrame>
+        <views:ExtendedFrame WidthRequest="50"
+            Padding="0.2"
+            HasShadow="false">
+            <Label Text="1"
+                HorizontalTextAlignment="Center" />
+        </views:ExtendedFrame>
+        <views:ExtendedFrame WidthRequest="50"
+            Padding="0.2"
+            HasShadow="false">
+            <Label Text="1"
+                HorizontalTextAlignment="Center" />
+        </views:ExtendedFrame>-->
+    </local:FlexLayoutExtend>
+</views:RoundedCornerView>

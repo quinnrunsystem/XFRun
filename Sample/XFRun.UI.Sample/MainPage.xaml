@@ -8,11 +8,12 @@
         <StackLayout VerticalOptions="CenterAndExpand"
             Margin="20">
             <!-- Place new controls here -->
-            <Label Text="Welcome to Xamarin.Forms!"
+            <Label Text="TextBox"
                 HorizontalOptions="Center"
                 VerticalOptions="CenterAndExpand" />
             <ui:TextBox FillColor="Gray"
-                        Placeholder="Text placeholder "
+                        
+                Placeholder="Text placeholder "
                 LeftIcon="baseline_account_circle_black_18dp"
                 MakeCircle="false"
                 RoundedCornerRadius="15"
@@ -20,6 +21,14 @@
                 PlaceholderColor="Silver"
                 BorderWidth="1"
                 BorderColor="Lime" />
+            
+            <Label Text="PinView"
+                HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand" />
+            <ui:PinView FillColor="White"
+                MakeCircle="false"
+                RoundedCornerRadius="15"
+                BackgroundColor="Teal" Count="5" />
         </StackLayout>
     </Grid>
 </ContentPage>
