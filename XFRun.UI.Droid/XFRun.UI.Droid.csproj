@@ -141,6 +141,8 @@
     <Compile Include="Renderers\Calendar\MonoDroid.TimesSquare\CalendarPickerView.cs" />
     <Compile Include="Renderers\Calendar\MonoDroid.TimesSquare\CalendarRowView.cs" />
     <Compile Include="Renderers\Calendar\MonoDroid.TimesSquare\MonthAdapter.cs" />
+    <Compile Include="Renderers\Separator\SeparatorDroidView.cs" />
+    <Compile Include="Renderers\Separator\SeparatorRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -164,6 +166,7 @@
     <AndroidResource Include="Resources\layout\week.xml" />
     <Folder Include="Resources\drawable\" />
     <AndroidResource Include="Resources\drawable\calendar_bg_selector.xml" />
+    <Folder Include="Renderers\Separator\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\XFRun.UI\XFRun.UI.Forms.csproj">

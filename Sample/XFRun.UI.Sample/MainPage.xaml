@@ -7,11 +7,15 @@
              xmlns:controls="clr-namespace:XFRun.UI.Forms.Renderers.RadioButton;assembly=XFRun.UI.Forms"
     x:Class="XFRun.UI.Sample.MainPage">
     <StackLayout x:Name="xxx"
+                 Margin="0,20,0,0"
                  BackgroundColor="Lime">
-        <renderers:CalendarView
+        <!--<renderers:CalendarView
             x:Name="calendar"
             VerticalOptions="Center"
             HorizontalOptions="Center"
-        />
+        />-->
+        <renderers:Separator StrokeType="Dotted" Thickness="5" Color="Red" />
+        <renderers:Separator StrokeType="Dashed" Thickness="2" Color="Blue" />
+        <renderers:Separator StrokeType="Solid" Thickness="5" Color="Black" Orientation="Vertical"/>
     </StackLayout>
 </ContentPage>

@@ -65,6 +65,7 @@
     <Folder Include="Resources\" />
     <Folder Include="Renderers\RadioButton\" />
     <Folder Include="Renderers\Calendar\" />
+    <Folder Include="Renderers\Separator\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -85,6 +86,8 @@
     <Compile Include="Renderers\Calendar\StyleDescriptor.cs" />
     <Compile Include="Renderers\Calendar\MonthGridView.cs" />
     <Compile Include="Renderers\Calendar\CalendarViewRenderer.cs" />
+    <Compile Include="Renderers\Separator\UISeparator.cs" />
+    <Compile Include="Renderers\Separator\SeparatorRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
