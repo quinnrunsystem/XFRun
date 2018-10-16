@@ -8,11 +8,19 @@ namespace XFRun.UI.Forms
     public partial class PinView : RoundedCornerView
     {
         private List<Label> _labels;
+        private List<ExtendedFrame> _frames;
         public string PinCode = String.Empty;
-        public static BindableProperty CountProperty = BindableProperty.Create(nameof(CountProperty), typeof(int), typeof(PinView), 4, propertyChanged: (bindable, oldValue, newValue) =>
+
+        public Color FocusColor { get; set; } = Color.Green;
+        public Color BorderItemColor { get; set; } = Color.Gray;
+
+        public static BindableProperty CountProperty = BindableProperty.Create(nameof(CountProperty), typeof(int), typeof(PinView), null, propertyChanged: (bindable, oldValue, newValue) =>
         {
             PinView pinView = (PinView)bindable;
-            pinView.CreateListTextbox((int)newValue);
+            if (newValue != null)
+            {
+                pinView?.CreateListTextbox((int)newValue);
+            }
         });
 
         public int Count
@@ -30,15 +38,18 @@ namespace XFRun.UI.Forms
         private void CreateListTextbox(int count)
         {
             _labels = new List<Label>();
+            _frames = new List<ExtendedFrame>();
+
             for (int i = 0; i < count; i++)
             {
                 ExtendedFrame frame = new ExtendedFrame()
                 {
                     BorderThickness = 1,
                     CornerRadius = 15,
-                    BorderColor = Color.Gray,
+                    BorderColor = BorderItemColor,
                     HeightRequest = 50,
-                    WidthRequest = 50
+                    WidthRequest = 50,
+                    HasShadow = false
                 };
 
                 Label label = new Label()
@@ -49,10 +60,23 @@ namespace XFRun.UI.Forms
                     VerticalTextAlignment = TextAlignment.Center,
                     HorizontalTextAlignment = TextAlignment.Center
                 };
+                label.GestureRecognizers.Add(new TapGestureRecognizer()
+                {
+                    Command = new Command(HandleAction),
+                    CommandParameter = label
+                });
                 frame.Content = label;
+
                 _labels.Add(label);
+                _frames.Add(frame);
+
                 flexLayout.Children.Add(frame);
             }
+        }
+
+        void HandleAction(object obj)
+        {
+            FocusEntry(_labels.IndexOf((Label)obj));
         }
 
         public PinView()
@@ -63,14 +87,47 @@ namespace XFRun.UI.Forms
 
         void Handle_Tapped(object sender, System.EventArgs e)
         {
-            fakeEntry.Focus();
+            FocusEntry(0);
+        }
+
+        private int _focusPosition = 0;
+        private void FocusEntry(int position)
+        {
+            // Reset Color
+            for (int i = 0; i < _frames.Count; i++)
+            {
+                _frames[i].BorderColor = BorderItemColor;
+            }
+
+            if (position < _labels.Count)
+            {
+                _focusPosition = position;
+                _frames[position].BorderColor = FocusColor;
+                fakeEntry.Text =  _labels[position].Text;
+                fakeEntry.Focus();
+            }
+            else
+            {
+                fakeEntry.Unfocus();
+            }
         }
 
         void FakeEntry_TextChanged(object sender, TextChangedEventArgs e)
         {
-            foreach (var item in _labels)
+            if (!string.IsNullOrWhiteSpace(e.NewTextValue)
+                && int.TryParse(e.NewTextValue, out int newValue))
             {
-                item.Text = e.NewTextValue;
+                _labels[_focusPosition].Text = e.NewTextValue;
+
+                //Reset content
+                //fakeEntry.Text = string.Empty;
+
+                //Focus next item 
+                FocusEntry(_focusPosition + 1);
+            }
+            else
+            {
+                _labels[_focusPosition].Text = string.Empty;
             }
         }
 

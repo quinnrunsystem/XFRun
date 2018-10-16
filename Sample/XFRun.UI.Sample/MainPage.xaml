@@ -12,7 +12,6 @@
                 HorizontalOptions="Center"
                 VerticalOptions="CenterAndExpand" />
             <ui:TextBox FillColor="Gray"
-                        
                 Placeholder="Text placeholder "
                 LeftIcon="baseline_account_circle_black_18dp"
                 MakeCircle="false"
@@ -21,14 +20,14 @@
                 PlaceholderColor="Silver"
                 BorderWidth="1"
                 BorderColor="Lime" />
-            
             <Label Text="PinView"
                 HorizontalOptions="Center"
                 VerticalOptions="CenterAndExpand" />
             <ui:PinView FillColor="White"
                 MakeCircle="false"
                 RoundedCornerRadius="15"
-                BackgroundColor="Teal" Count="5" />
+                BackgroundColor="Teal"
+                Count="4" />
         </StackLayout>
     </Grid>
 </ContentPage>
