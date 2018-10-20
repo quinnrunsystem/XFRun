@@ -25,6 +25,7 @@ namespace XFRun.UI.Forms.Renderers
         /// Gets or sets a value indicating whether the text in the label is underlined.
         /// </summary>
         /// <value>A <see cref="bool"/> indicating if the text in the label should be underlined.</value>
+        [Obsolete("Already officially support in XF 3.3")]
         public bool IsUnderline
         {
             get
@@ -47,6 +48,7 @@ namespace XFRun.UI.Forms.Renderers
         /// Gets or sets a value indicating whether the text in the label is underlined.
         /// </summary>
         /// <value>A <see cref="bool"/> indicating if the text in the label should be underlined.</value>
+        [Obsolete("Already officially support in XF 3.3")]
         public bool IsStrikeThrough
         {
             get
